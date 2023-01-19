@@ -5,7 +5,7 @@
 
 
 .nav{
-    width: 310px;
+    width: 390px;
     height: 50px;
     position: fixed;
     top: 0;
@@ -53,9 +53,14 @@ button{
     outline: none;
     padding: .6em 1em;
     border-radius: 3px;
-    background-color: #03bb56;
+    background-color: #EF626C;
     color: #fff;
 }
+
 .save{
     background-color: #0f65d4;
+}
+
+.back{
+    background-color: #3e8e41;
 }

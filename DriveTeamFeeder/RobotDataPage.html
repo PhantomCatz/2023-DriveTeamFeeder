@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team 2637 Demo</title>
+    <style>
+        @font-face {
+            font-family: myFirstFont;
+            src: url(Audiowide/Audiowide-Regular.ttf);
+
+        }
+        teamid
+        {
+            color: cornflowerblue;
+            margin-left: 550px;
+        }
+
+        body {
+            margin: 0px;
+            font-family: myFirstFont;
+
+        }
+
+        .sidebar {
+            margin: 0px;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a.active {
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+            font-family: myFirstFont;
+        }
+
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+
+        .web
+        {
+            font-family: myFirstFont;
+            margin-left: 210px;
+        }
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 700px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size: 11px}
+        }
+        table {
+            align-content: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 80%;
+            height: 100px;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="sidebar">
+    <a class="active" href="RobotDataPage.html">
+        <img style="height: 25px" src="images/dataicon.png" alt="data icon">
+        Robot</a>
+    <a href="Menu.html">
+        <img style="height: 25px" src="images/homesicon.png" alt="home icon">
+        Home
+    </a>
+
+    <a href="drawing.html">
+        <img style="height: 25px" src="images/drawicon.png" alt="draw icon" >
+        Drawing</a>
+</div>
+<div class = "web">
+<h1 style="color: cornflowerblue;font-family: basic">Team # (JS Needed)</h1>
+
+    <h2 class="teamid">Name: PhantomCatz</h2>
+
+
+
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/2637robot1.jpeg" style="width:100%" alt="pic of robot">
+            <div class="text">One</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/2637robot2.jpeg" style="width:100%" alt="pic of robot">
+            <div class="text">Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/2637robot3.jpeg" style="width:100%" alt="pic of robot">
+            <div class="text">Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+    <h2 style="color: coral" > Key Specs:</h2>
+    Drive, Motors, Turret, Vision, Intake, Wheels,…
+
+<hr style="color: cornflowerblue">
+
+<h2 style="color: coral">Performance</h2>
+
+<table>
+    <tr>
+        <td>
+            <h2 style="color: goldenrod" id="Auton">Auton</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>
+                Capability:
+            </h3>
+        </td>
+        <td>
+            <p>
+                2 ball, 3 ball, 4 ball. Pref 3 ball
+            </p>
+        </td>
+    </tr>
+    <p>
+
+    </p>
+    <tr>
+        <td>
+            <h3>Path:</h3>
+        </td>
+        <!td>
+    </tr>
+    <tr>
+        <td>
+            <h3>Position after:</h3>
+        </td>
+    </tr>
+</table>
+<table><!table for climb>
+    <tr>
+        <td>
+            <h2 style="color: goldenrod">Climb:</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>Rung:</h3>
+        </td>
+        <td>
+            <p style="float: left">Mid. Traversal not perfect(JS Needed)</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>Time: </h3>
+        </td>
+        <td>
+            <p style="float:left;">25 s (best), 35 s(Avg)(JS Needed)</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>Side:</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>
+                Avg Efficiency:
+            </h3>
+        </td>
+        <td>
+            <p>
+                70%
+            </p>
+        </td>
+    </tr>
+</table>
+<h2>
+    Match Data: Scores
+</h2>
+<hr>
+<table border="1">
+    <tr>
+        <td>
+            <h3>M</h3>
+        </td>
+        <td>
+            <h3>Auton</h3>
+        </td>
+        <td>
+            <h3>Teleop</h3>
+        </td>
+        <td>
+            <h3>Climb</h3>
+        </td>
+        <td>
+            <h3>Total</h3>
+        </td>
+        <td>
+            <h3>W/L</h3>
+        </td>
+        <td>
+            <h3>RP</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+    </tr>
+    <tr>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+        <td>
+            DataExample
+        </td>
+    </tr>
+</table>
+<hr>
+
+<h2 style="color: goldenrod">Teleop:</h2>
+<h3>Shooting:</h3>
+
+<table border="1">
+    <tr>
+        <td>
+            Efficiency
+        </td>
+        <td>
+            Position
+        </td>
+        <td>
+            Consistency
+        </td>
+        <td>
+            CycleTime
+        </td>
+    </tr>
+    <tr>
+        <td>
+            70%
+        </td>
+        <td>
+            Fender(P)<br>Both Side
+        </td>
+        <td>
+            Mid-High
+        </td>
+        <td>
+            3.5s
+        </td>
+    </tr>
+
+</table>
+
+<HR>
+<table>
+    <tr>
+        <td>
+            <h2 style="color: goldenrod" id="Defense">Defense:</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Played:
+        </td>
+        <td>
+            Y/N
+        </td>
+    </tr>
+    <tr>
+        <td>
+         Push/Block/Both:
+        </td>
+        <td>
+            Block
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Efficiency:
+        </td>
+        <td>
+            High
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <h2 style="color: goldenrod" id="Notes">Notes:</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>Driver:</h3>
+        </td>
+        <td>
+            (JS Needed)
+        </td>
+    </tr>
+
+</table>
+
+<table>
+    <tr>
+        <td>
+            <h2 style="color: goldenrod">Generic:</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Weak shooting from far end.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Can push defense robots.
+        </td>
+    </tr>
+</table>
+
+    <form action="/action_page.php" method="post">
+        <div>
+
+
+          <!--  <textarea name="comments" id="comments" style="font-family:myFirstFont;font-size:1.2em;">
+            Comments:
+            </textarea> -->
+        </div>
+        <label for="comment">Comments:</label>
+        <input type="text" id="comment" name="Comments: "><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

@@ -24,6 +24,11 @@ clearBtn.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 })
 
+let backBtn = document.querySelector(".back")
+backBtn.addEventListener("click", () => {
+    location.href = "Menu.html";
+})
+
 // Saving drawing as image
 let saveBtn = document.querySelector(".save")
 saveBtn.addEventListener("click", () => {
@@ -35,6 +40,7 @@ saveBtn.addEventListener("click", () => {
     a.download = "sketch.png"
     a.click()
 })
+
 
 window.addEventListener("mousedown", (e) => draw = true)
 window.addEventListener("mouseup", (e) => draw = false)
