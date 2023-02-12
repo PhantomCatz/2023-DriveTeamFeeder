@@ -1,7 +1,9 @@
 // TBAInterface funcitons to pull data from TheBlueAlliance.com
 var teams = null;
 var schedule = null;
+var eventCode = "2023cada";
 var authKey = "zZOAWQTsogtx6DKgR93GPXs5hMJvnhmj2ysObTbYOVGLA3JIcKdr5PaOtIkxliFT";
+const URL = "https://www.thebluealliance.com/api/v3";
 
 /**
  * Get list of teams in event
@@ -30,6 +32,7 @@ function getTeams(eventCode) {
  *
  * @param {eventCode} eventCode the event code (i.e. 2020caln) to pull the team list
  */
+/*
 function getSchedule(eventCode) {
     if (authKey) {
         var xmlhttp = new XMLHttpRequest();
@@ -44,5 +47,6 @@ function getSchedule(eventCode) {
         };
         // Send request
         xmlhttp.send();
-    }
+    } 
 }
+*/

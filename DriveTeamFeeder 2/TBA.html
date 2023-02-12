@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0"
+    />
+    <title>TBA Api UwU</title>
+  </head>
+  <body>
+    <h1>Blue Alliance Team Chooser<br />ex. 2022cala, 2022carv, 2022cave, 2023cada</h1>
+    
+    <input
+      id="eventcode"
+      type="text"
+      value=""
+      oninput="eventcode = this.value"
+    />
+
+    <input
+    class = "numberInput"
+    id="teamNumber"
+    type = "number"
+    value= ""
+    oninput = "teamNumber = this.value" 
+    />
+
+    
+    <OwO id="teams"></OwO> 
+    <p id ="display"></p>
+    <button onclick="compareTeams()">Get Teams OwO</button>
+    <style>
+      h1 {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+      }
+      input
+       {
+        position: absolute;
+        top: 110px;
+        left: 20px;
+      }
+      input.numberInput
+      {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+      }
+      p
+      {
+        position: absolute;
+        top:200px;
+        left:20px;
+
+      }
+
+      button {
+        position: absolute;
+        top: 110px;
+        left: 200px;
+      }
+      OwO {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+      }
+    </style>
+    <script>
+      const authKey = '0iSKwn3ykkgDT9ToHqwBizSiiaa44pyLIK85oEdgOkzxNJS1X0vBtDFrJ24PiAWW';
+      let eventcode = document.getElementById("eventcode").value;
+      let lol = true;
+
+      //const eventcode = document.getElementById(eventcode).value;
+      function getTeams() {
+        fetch(
+          'https://www.thebluealliance.com/api/v3/event/' +
+            eventcode +
+            '/teams/simple',
+          {
+            method: "GET",
+            headers: {
+              'X-TBA-Auth-Key':
+                '0iSKwn3ykkgDT9ToHqwBizSiiaa44pyLIK85oEdgOkzxNJS1X0vBtDFrJ24PiAWW',
+            },
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            const teamsList = document.getElementById("teams");
+            document.getElementById("teams").innerHTML = "";
+            data.forEach((data) => 
+            {
+              const teamInfo = document.createElement("li");
+              /*if (getTeams.data.team_number == 2637)
+              {
+                teamInfo.innerHTML = "success";
+              }*/
+             teamInfo.innerHTML = data.team_number ;//+ " - " + data.nickname;
+             teamsList.appendChild(teamInfo);
+
+            });
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+      function compareTeams()
+      {
+        const authKey = '0iSKwn3ykkgDT9ToHqwBizSiiaa44pyLIK85oEdgOkzxNJS1X0vBtDFrJ24PiAWW';
+        let eventcode = '2023cada';
+       // const eventCode = '2022cada';
+        let teamNumber = document.getElementById("teamNumber").value;
+
+        fetch('https://www.thebluealliance.com/api/v3/event/' +
+            eventcode +
+            '/teams/simple',
+          {
+            method: "GET",
+            headers: {
+              'X-TBA-Auth-Key':
+                '0iSKwn3ykkgDT9ToHqwBizSiiaa44pyLIK85oEdgOkzxNJS1X0vBtDFrJ24PiAWW',
+            },
+          })
+          .then(response => response.json())
+          .then(teams => {
+            let team = teams.find(team => team.team_number == teamNumber);
+            if (!team) {
+              document.getElementById("display").innerHTML = "No team found"
+              return;
+            }
+
+            document.getElementById("display").innerHTML = teamNumber;
+
+          })
+          .catch(error => console.error(error));
+      }
+    </script>
+  </body>
+</html>

@@ -46,7 +46,7 @@ window.addEventListener("mousedown", (e) => draw = true)
 window.addEventListener("mouseup", (e) => draw = false)
 
 window.addEventListener("mousemove", (e) => {
-    if(prevX == null || prevY == null || !draw){
+    if (prevX == null || prevY == null || !draw) {
         prevX = e.clientX
         prevY = e.clientY
         return
