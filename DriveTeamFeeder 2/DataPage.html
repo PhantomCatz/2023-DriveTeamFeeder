@@ -12,9 +12,7 @@
         <a href="Drawing.html">Strategy Drawing</a>
         <a href="DataPage.html">Robots</a>
     </div>
-    
-<script src = "dataPgScript.js"></script>
-<!--<div class="sidebar">
+    <!--<div class="sidebar">
     <a class="active" href="DataPage.html">
         <img style="height: 25px" src="images/dataicon.png" alt="data icon">
         Robot</a>
@@ -28,16 +26,21 @@
         Drawing</a>
 </div>-->
 <div class = "web">
-     
-    <h1 style="color: cornflowerblue;font-family: basic" id="team number"></h1>
+
+    <script src = "TeamSelection.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+     <script>
+        console.log(JSON.parse(localStorage.getItem('myObject')));
+        const TeamNum = localStorage.getItem('teamNum');
+
+        document.getElementById('teamNum').textContent = TeamNum;
+
+
+     </script>
+    <h1 style="color: cornflowerblue;font-family: basic" id="team number" >Team# </h1>
 
 
     <h2 class="teamId" id="teamName">  </h2>
-
-    <script>
-        
-        document.getElementById("teamName").innerHTML += teamNum;
-    </script>
 
 
     <div class="slideshow-container">
@@ -223,6 +226,52 @@
     <hr>
     <h2 style="color: goldenrod">Teleop:</h2>
     <td>
+        <tr>
+            <canvas id="myChart" style="width:100%"></canvas>
+                <script>
+                    var autonScore   = [30,32,28,34,32,26,20,24,34,22];
+                    var teleopScore  = [46,40,36,38,44,34,48,38,42,46];
+                    var endgameScore = [20,0,10,15,5,10,20,15,0,5];
+                    var match        = [1,2,3,4,5,6,7,8,9,10];
+                
+                    var myChart = new Chart("myChart",
+                    {
+                        type: "line", 
+                        data: 
+                        {
+                            labels : match,
+                            datasets: 
+                            [{
+                                data: autonScore,
+                                label: "Auton",
+                                borderColor: "red",
+                                fill: false
+                            },
+                            {
+                                data: teleopScore,
+                                label: "Teleop",
+                                borderColor: "blue",
+                                fill: false
+                            },
+                            {
+                                data: endgameScore,
+                                label: "Endgame",
+                                borderColor: "green",
+                                fill: false
+                            }
+                        ]
+                        },
+                        options: 
+                        {
+                            title: 
+                            {
+                                display: true,
+                                text: "Score for Each Match"
+                            }
+                        }
+                    });
+                </script>
+        </tr>
         <tr>
             <p>Cones and Cubes Scored:</p>
             <div class="grid-container">

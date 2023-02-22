@@ -34,7 +34,6 @@
     <img class = "img1" src="images/team-2637-logo.png" alt="logo icon">
 
 </div>
-
  <div class="search">
         <input
           class="searchfx"
@@ -43,55 +42,30 @@
           value= ""
           oninput = "teamNumber = this.value" 
           />
-        <button onclick="compareTeams()" id="search-button">Search</button> 
-    
-        
-      <script>
-        function compareTeams()
-        {
-          const authKey = '0iSKwn3ykkgDT9ToHqwBizSiiaa44pyLIK85oEdgOkzxNJS1X0vBtDFrJ24PiAWW';
-          let eventcode = '2023cada';
-         // const eventCode = '2022cada';
-          let teamNumber = document.getElementById("teamNumber").value;
-  
-          fetch('https://www.thebluealliance.com/api/v3/event/' +
-              eventcode +
-              '/teams/simple',
+          <button onclick="compareTeams()" id="search-button">Search</button> 
+
+            <script src = "TeamSelection.js"> 
+            const teamNumber = document.getElementById('search');
+            form.addEventListener('sumbit', function(e)
             {
-              method: "GET",
-              headers: {
-                'X-TBA-Auth-Key':
-                  '0iSKwn3ykkgDT9ToHqwBizSiiaa44pyLIK85oEdgOkzxNJS1X0vBtDFrJ24PiAWW',
-              },
+              e.preventDefault();
+
+              const teamInput = teamNumber.value;
+              localStorage.setItem('teamNum', {teamInput});
+
+              window.location.href = "Datapage.html"
             })
-            .then(response => response.json())
-            .then(teams => {
-              let team = teams.find(team => team.team_number == teamNumber);
-              if (!team) 
-              {
-                document.getElementById("display").innerHTML = "No team found"
-                return;
-              }
-             // else{
-             // document.getElementById("display").innerHTML = teamNumber;
-              location.href = "DataPage.html";
-                  
-            })
-            .catch(error => console.error(error));
-        }
-        function teamNum()
-        {
-            console.log(teamNumber);
-            return;
-        }
-        
-      </script>
-      <p id ="display" class="stupid"></p>
+            
+            </script>
+
+      
+
+        <p id ="display" class="stupid"></p>
   
-<div class="cats">  
-<button class="closeButton" onclick="changeImage();">close!</button>
-<img class="catImg" id="image" src="images/cat1.png" />
-<button class="openButton" onclick="changeImageBack()">open!</button>
-</div>
+  <div class="cats">  
+  <button class="closeButton" onclick="changeImage();">close!</button>
+  <img class="catImg" id="image" src="images/cat1.png" />
+  <button class="openButton" onclick="changeImageBack()">open!</button>
+  </div>
 </body>
 </html>
