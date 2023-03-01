@@ -26,7 +26,7 @@ clearBtn.addEventListener("click", () => {
 
 let backBtn = document.querySelector(".back")
 backBtn.addEventListener("click", () => {
-    location.href = "Menu.html";
+    location.href = "index.html";
 })
 
 // Saving drawing as image

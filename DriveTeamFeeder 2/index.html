@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset = "UTF-8">
+    <title>2637 Drive Team Feeder Menu</title>
+    <link rel="stylesheet" href="Menu.css">
+    <script>
+        function changeImage() {
+            var img = document.getElementById("image");
+            img.src = "images/cat1.png";
+            return false;
+        }
+        function changeImageBack() {
+            var img = document.getElementById("image");
+            img.src = "images/cat2.png";
+            return false;
+        }
+       
+    </script>
+    </head>
+<body>
+    <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="Drawing.html">Strategy Drawing</a>
+    <a href="DataPage.html">Robots</a>
+</div>
+
+<div style="padding-left:16px">
+   <h1 class = "head">TEAM 2637 DRIVE TEAM FEEDER</h1>
+</div>
+<div>
+    <img class = "img1" src="images/team-2637-logo.png" alt="logo icon">
+
+</div>
+ <div class="search">
+        <input
+          class="searchfx"
+          id="teamNumber"
+          type = "number"
+          value= ""
+          oninput = "teamNumber = this.value" 
+          />
+          <button onclick="compareTeams()" id="search-button">Search</button> 
+
+            <script src = "TeamSelection.js"> 
+            const teamNumber = document.getElementById('search');
+            form.addEventListener('sumbit', function(e)
+            {
+              e.preventDefault();
+
+              const teamInput = teamNumber.value;
+              localStorage.setItem('teamNum', {teamInput});
+
+              window.location.href = "Datapage.html";
+            })
+            </script>
+
+      
+
+        <p id ="display" class="stupid"></p>
+  
+  <div class="cats">  
+  <button class="closeButton" onclick="changeImage();">close!</button>
+  <img class="catImg" id="image" src="images/cat1.png" />
+  <button class="openButton" onclick="changeImageBack()">open!</button>
+  </div>
+</body>
+</html>

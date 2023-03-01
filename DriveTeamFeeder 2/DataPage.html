@@ -4,44 +4,31 @@
     <meta charset="UTF-8">
     <title>Robot Data Page</title>
     <link rel="stylesheet" href="DataPage.css">
+    <script src = "TeamSelection.js"></script>
+    <script>
+       window.onload = function() {
+            console.log('loading' + window.location.search);
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get('team');
+            document.getElementById("teamNumber").innerHTML ="Team #" + myParam;
+        };
+    </script>
+
 </head>
 
 <body>
     <div class="topnav">
-        <a class="active" href="Menu.html">Home</a>
+        <a class="active" href="index.html">Home</a>
         <a href="Drawing.html">Strategy Drawing</a>
         <a href="DataPage.html">Robots</a>
     </div>
-    <!--<div class="sidebar">
-    <a class="active" href="DataPage.html">
-        <img style="height: 25px" src="images/dataicon.png" alt="data icon">
-        Robot</a>
-    <a href="Menu.html">
-        <img style="height: 25px" src="images/homesicon.png" alt="home icon">
-        Home
-    </a>
-
-    <a href="drawing.html">
-        <img style="height: 25px" src="images/drawicon.png" alt="draw icon" >
-        Drawing</a>
-</div>-->
+    
 <div class = "web">
-
-    <script src = "TeamSelection.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-     <script>
-        console.log(JSON.parse(localStorage.getItem('myObject')));
-        const TeamNum = localStorage.getItem('teamNum');
-
-        document.getElementById('teamNum').textContent = TeamNum;
-
-
-     </script>
-    <h1 style="color: cornflowerblue;font-family: basic" id="team number" >Team# </h1>
-
+    <h1 style="color: cornflowerblue;font-family: basic" id="teamNumber" ></h1>
 
     <h2 class="teamId" id="teamName">  </h2>
-
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+   
 
     <div class="slideshow-container">
 
@@ -65,10 +52,8 @@
 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
-
     </div>
     <br>
-
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
@@ -85,6 +70,15 @@
 
         function currentSlide(n) {
             showSlides(slideIndex = n);
+        }
+
+        function addComment() {
+
+            const commenting = document.getElementById('comment').value;
+            console.log('add comment' + commenting);
+            document.getElementById("addComm").innerHTML ="user: " + commenting;
+            // get the value from comment field
+            // add comment value to one html content
         }
 
         function showSlides(n) {
@@ -104,7 +98,7 @@
         }
     </script>
 
-    <h2 style="color: coral" > Key Specs:</h2>
+    <h3 style="color: coral" > Key Specs:</h3>
     <p id="drivetrain">Drivetrain:</p>
     <p id="motorsUsed">Motors used:</p>
     <p id="vision">Vision (Y/N):</p>
@@ -357,18 +351,19 @@
 
     </table>
 
-    <form action="/action_page.php" method="post">
+    <form>
         <div>
-
-
-            <!--  <textarea name="comments" id="comments" style="font-family:myFirstFont;font-size:1.2em;">
-              Comments:
-              </textarea> -->
+        <p id ="addComm"></p>
         </div>
-        <label for="comment">Comments:</label>
-        <input type="text" id="comment" name="Comments: "><br><br>
-        <input type="submit" value="Submit">
+        <label for="comment">Sumbit comments:</label>
+        <input
+          class="comment"
+          id="comment"
+          type = "text"
+        />
+        <button type="button" onclick="addComment()">Sumbit</button>
     </form>
+    <br/>
 </div>
 
 </body>

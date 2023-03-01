@@ -3,17 +3,19 @@
     src: url(Audiowide/Audiowide-Regular.ttf);
 
 }
-teamid
-{
+
+.teamid {
     color: cornflowerblue;
     margin-left: 550px;
-
+    object-fit: contain;
 }
 
 .topnav {
     overflow: hidden;
     background-color: #e9e9e9;
+    object-fit: contain;
 }
+
 .topnav a {
     float: left;
     display: block;
@@ -22,24 +24,33 @@ teamid
     padding: 18px 20px;
     text-decoration: none;
     font-size: 17px;
+    object-fit: contain;
 }
+
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+    object-fit: contain;
 }
+
 .topnav a.active {
     background-color: #2196F3;
     color: white;
+    object-fit: contain;
 }
+
 .topnav .search-container {
     float: right;
+    object-fit: contain;
 }
+
 .topnav input[type=text] {
     padding: 0px;
     margin-top: 0px;
     font-size: 17px;
     border: none;
 }
+
 .topnav .search-container button {
     float: right;
     padding: 6px 10px;
@@ -50,14 +61,19 @@ teamid
     border: none;
     cursor: pointer;
 }
+
 .topnav .search-container button:hover {
     background: #ccc;
 }
+
 @media screen and (max-width: 600px) {
     .topnav .search-container {
         float: none;
     }
-    .topnav a, .topnav input[type=text], .topnav .search-container button {
+
+    .topnav a,
+    .topnav input[type=text],
+    .topnav .search-container button {
         float: none;
         display: block;
         text-align: left;
@@ -65,6 +81,7 @@ teamid
         margin: 0;
         padding: 14px;
     }
+
     .topnav input[type=text] {
         border: 1px solid #ccc;
     }
@@ -73,7 +90,7 @@ teamid
 body {
     margin: 0px;
     font-family: myFirstFont;
-
+    object-fit: contain;
 }
 
 .sidebar {
@@ -84,6 +101,7 @@ body {
     position: fixed;
     height: 100%;
     overflow: auto;
+    object-fit: contain;
 }
 
 .sidebar a {
@@ -108,6 +126,7 @@ div.content {
     padding: 1px 16px;
     height: 1000px;
     font-family: myFirstFont;
+
 }
 
 @media screen and (max-width: 700px) {
@@ -116,8 +135,14 @@ div.content {
         height: auto;
         position: relative;
     }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -127,14 +152,19 @@ div.content {
     }
 }
 
-.web
-{
+.web {
     font-family: myFirstFont;
     margin-left: 21px;
 
 }
-.mySlides {display: none}
-img {vertical-align: middle;}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -144,7 +174,8 @@ img {vertical-align: middle;}
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -166,8 +197,9 @@ img {vertical-align: middle;}
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -202,7 +234,8 @@ img {vertical-align: middle;}
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
@@ -213,14 +246,25 @@ img {vertical-align: middle;}
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
 }
+
 table {
     align-content: center;
     border-collapse: collapse;
@@ -230,7 +274,8 @@ table {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     text-align: left;
     padding: 16px;
 }
@@ -239,15 +284,14 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-.grid-container
-{
+.grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: #2196F3;
     padding: 10px;
 }
-.grid-item
-{
+
+.grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
