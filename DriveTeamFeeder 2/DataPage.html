@@ -18,13 +18,15 @@
 
 <body>
     <div class="topnav">
-        <a class="active" href="index.html">Home</a>
+        <a  class="active" href="DataPage.html">Robot</a>
+        <a href="index.html">Home</a>
         <a href="Drawing.html">Strategy Drawing</a>
-        <a href="DataPage.html">Robots</a>
+       
     </div>
     
 <div class = "web">
-    <h1 style="color: cornflowerblue;font-family: basic" id="teamNumber" ></h1>
+    <h1 style="color: cornflowerblue;font-family: basic" id="teamNumber" class="title" ></h1>
+    <p>---------------------------------------------------------------------------------------------------</p>
 
     <h2 class="teamId" id="teamName">  </h2>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -52,14 +54,14 @@
 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
-    </div>
+    
     <br>
-    <div style="text-align:center">
+    <div style="text-align:center" class="dots">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
+    </div>  
+</div>
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -97,20 +99,22 @@
             dots[slideIndex-1].className += " active";
         }
     </script>
-
+<div class="keySpecs">
     <h3 style="color: coral" > Key Specs:</h3>
     <p id="drivetrain">Drivetrain:</p>
     <p id="motorsUsed">Motors used:</p>
     <p id="vision">Vision (Y/N):</p>
     <p id="Mechanisms">Mechanisms:</p>
+</div>
+
     <script>
-        document.getElementById("drivetrain").innerHTML = "Drivetrain: " + drivetrain;
+       // document.getElementById("drivetrain").innerHTML = "Drivetrain: "; //+ drivetrain;
 
-        document.getElementById("motorsUsed").innerHTML = "Motors used: " + motorsUsed;
+       // document.getElementById("motorsUsed").innerHTML = "Motors used: ";//+ motorsUsed;
 
-        document.getElementById("vision").innerHTML = "Vision: " + vision;
+     //   document.getElementById("vision").innerHTML = "Vision: " ;//+ vision;
 
-        document.getElementById("mechanism").innerHTML = "Mechanisms: " + mechanism;
+        //document.getElementById("mechanism").innerHTML = "Mechanisms: ";  //+ mechanism;
     </script>
 
     <hr style="color: cornflowerblue">
@@ -137,8 +141,7 @@
                 <h3>Path:</h3>
             </td>
             <td>
-                <!temporary until we get prachod's api done>
-                <img src="images/chargedupfield.jpg" alt = "Auton path drawing" width="802" height="366">
+                <img src="images/chargedupfield.svg" alt = "Auton path drawing" width="802" height="366">
             </td>
         </tr>
     </table>

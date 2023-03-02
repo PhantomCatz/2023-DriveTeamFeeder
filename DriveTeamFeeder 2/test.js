@@ -2,7 +2,7 @@
 
 
 // create a connection to the database
-/*
+
 const connection = mysql.createConnection({
     host: '50.87.253.209',
     port: '3306',
@@ -10,15 +10,8 @@ const connection = mysql.createConnection({
     password: 'K$JQE+4L#T5?',
     database: 'restock247.com_restockt_WP01N.2637-Scouting'
 });
-*/
-const mysql = require('mysql2');
-const connection = mysql.createConnection({
-    host: 'localhost',
-    port: '3306',
-    user: 'root',
-    password: 'Lc578523!',
-    database: 'Scouting'
-});
+
+
 
 // connect to the database
 connection.connect();

@@ -1,18 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body
-        {
-            background-image: url('images/chargedupfield.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 1080px;
-        }
+body {
+    background-image: url('images/chargedupfield.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-size: 1500px;
+    object-fit: contain;
+    background-attachment: fixed;
+    background-position: center;
+    background-position: bottom;
+}
 
 
-.nav{
+.nav {
     width: 450px;
     height: 50px;
     position: fixed;
@@ -25,11 +29,12 @@ body
     opacity: .3;
     transition: opacity .5s;
 }
-.nav:hover{
+
+.nav:hover {
     opacity: 1;
 }
 
-.clr{
+.clr {
     height: 30px;
     width: 30px;
     background-color: blue;
@@ -37,32 +42,42 @@ body
     border: 3px solid rgb(214, 214, 214);
     transition: transform .5s;
 }
-.clr:hover{
+
+.clr:hover {
     transform: scale(1.2);
+
 }
-.clr:nth-child(1){
+
+.clr:nth-child(1) {
     background-color: #000;
+
 }
-.clr:nth-child(2){
+
+.clr:nth-child(2) {
     background-color: #EF626C;
 }
-.clr:nth-child(3){
+
+.clr:nth-child(3) {
     background-color: #fdec03;
 }
-.clr:nth-child(4){
+
+.clr:nth-child(4) {
     background-color: #24d102;
 }
-.clr:nth-child(5){
+
+.clr:nth-child(5) {
     background-color: #fff;
 }
-.clr:nth-child(6){
+
+.clr:nth-child(6) {
     background-color: #0f65d4;
 }
-.clr:nth-child(7){
+
+.clr:nth-child(7) {
     background-color: blueviolet;
 }
 
-button{
+button {
     border: none;
     outline: none;
     padding: .6em 1em;
@@ -71,10 +86,10 @@ button{
     color: #fff;
 }
 
-.save{
+.save {
     background-color: #0f65d4;
 }
 
-.back{
+.back {
     background-color: #3e8e41;
 }
