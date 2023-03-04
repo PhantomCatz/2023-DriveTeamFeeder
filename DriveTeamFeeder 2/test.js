@@ -1,14 +1,15 @@
-//const mysql = require('mysql2');
-
+const mysql = require('mysql2');
+const express = require('express');
+const app = express();
 
 // create a connection to the database
 
 const connection = mysql.createConnection({
     host: '50.87.253.209',
     port: '3306',
-    user: 'restock247.com_restockt_2637',
+    user: 'restockt_2637',
     password: 'K$JQE+4L#T5?',
-    database: 'restock247.com_restockt_WP01N.2637-Scouting'
+    database: 'restockt_Scouting'
 });
 
 
@@ -17,14 +18,14 @@ const connection = mysql.createConnection({
 connection.connect();
 
 // select all rows from a table
-var query = 'SELECT * FROM test';
+var query = 'SELECT * FROM MatchScouting';
 //query = 'insert into test values (2637)';
 connection.query(query, (error, results, fields) => {
     if (error) throw error;
     console.log(results);
-
 });
 
+//location.href = "DataPage.html?results=" + results;
 // close the connection
 connection.end();
 

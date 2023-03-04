@@ -13,7 +13,6 @@
             document.getElementById("teamNumber").innerHTML ="Team #" + myParam;
         };
     </script>
-
 </head>
 
 <body>
@@ -21,353 +20,324 @@
         <a  class="active" href="DataPage.html">Robot</a>
         <a href="index.html">Home</a>
         <a href="Drawing.html">Strategy Drawing</a>
-       
     </div>
+        
+    <div class = "web">
+        <h1 style="color: cornflowerblue;font-family: basic" id="teamNumber" class="title" ></h1>
+        <hr>
+
+        <h2 class="teamId" id="teamName">  </h2>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     
-<div class = "web">
-    <h1 style="color: cornflowerblue;font-family: basic" id="teamNumber" class="title" ></h1>
-    <p>---------------------------------------------------------------------------------------------------</p>
+        <div class="slideshow-container">
 
-    <h2 class="teamId" id="teamName">  </h2>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-   
-
-    <div class="slideshow-container">
-
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="images/2637robot1.jpeg" style="width:100%" alt="pic of robot">
-            <div class="text">One</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="images/2637robot2.jpeg" style="width:100%" alt="pic of robot">
-            <div class="text">Two</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="images/2637robot3.jpeg" style="width:100%" alt="pic of robot">
-            <div class="text">Three</div>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-    
-    <br>
-    <div style="text-align:center" class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>  
-</div>
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function addComment() {
-
-            const commenting = document.getElementById('comment').value;
-            console.log('add comment' + commenting);
-            document.getElementById("addComm").innerHTML ="user: " + commenting;
-            // get the value from comment field
-            // add comment value to one html content
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
-    </script>
-<div class="keySpecs">
-    <h3 style="color: coral" > Key Specs:</h3>
-    <p id="drivetrain">Drivetrain:</p>
-    <p id="motorsUsed">Motors used:</p>
-    <p id="vision">Vision (Y/N):</p>
-    <p id="Mechanisms">Mechanisms:</p>
-</div>
-
-    <script>
-       // document.getElementById("drivetrain").innerHTML = "Drivetrain: "; //+ drivetrain;
-
-       // document.getElementById("motorsUsed").innerHTML = "Motors used: ";//+ motorsUsed;
-
-     //   document.getElementById("vision").innerHTML = "Vision: " ;//+ vision;
-
-        //document.getElementById("mechanism").innerHTML = "Mechanisms: ";  //+ mechanism;
-    </script>
-
-    <hr style="color: cornflowerblue">
-
-    <h2 style="color: coral">Performance</h2>
-
-    <table>
-        <tr>
-            <td>
-                <h2 style="color: goldenrod" id="Auton">Auton</h2>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Mobility:</p>
-                <p>Docking:</p>
-                <p>Time to dock:</p>
-                <p>Engaged:</p>
-                <p>Time to engage:</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Path:</h3>
-            </td>
-            <td>
-                <img src="images/chargedupfield.svg" alt = "Auton path drawing" width="802" height="366">
-            </td>
-        </tr>
-    </table>
-    <h2>
-        Match Data: Scores
-    </h2>
-    <hr>
-    <table border="1">
-        <tr>
-            <td>
-                <h3>M</h3>
-            </td>
-            <td>
-                <h3>Auton</h3>
-            </td>
-            <td>
-                <h3>Teleop</h3>
-            </td>
-            <td>
-                <h3>Climb</h3>
-            </td>
-            <td>
-                <h3>Total</h3>
-            </td>
-            <td>
-                <h3>W/L</h3>
-            </td>
-            <td>
-                <h3>RP</h3>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-        </tr>
-        <tr>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-            <td>
-                DataExample
-            </td>
-        </tr>
-    </table>
-    <hr>
-    <h2 style="color: goldenrod">Teleop:</h2>
-    <td>
-        <tr>
-            <canvas id="myChart" style="width:100%"></canvas>
-                <script>
-                    var autonScore   = [30,32,28,34,32,26,20,24,34,22];
-                    var teleopScore  = [46,40,36,38,44,34,48,38,42,46];
-                    var endgameScore = [20,0,10,15,5,10,20,15,0,5];
-                    var match        = [1,2,3,4,5,6,7,8,9,10];
-                
-                    var myChart = new Chart("myChart",
-                    {
-                        type: "line", 
-                        data: 
-                        {
-                            labels : match,
-                            datasets: 
-                            [{
-                                data: autonScore,
-                                label: "Auton",
-                                borderColor: "red",
-                                fill: false
-                            },
-                            {
-                                data: teleopScore,
-                                label: "Teleop",
-                                borderColor: "blue",
-                                fill: false
-                            },
-                            {
-                                data: endgameScore,
-                                label: "Endgame",
-                                borderColor: "green",
-                                fill: false
-                            }
-                        ]
-                        },
-                        options: 
-                        {
-                            title: 
-                            {
-                                display: true,
-                                text: "Score for Each Match"
-                            }
-                        }
-                    });
-                </script>
-        </tr>
-        <tr>
-            <p>Cones and Cubes Scored:</p>
-            <div class="grid-container">
-                <div class="grid-item">Cones</div>
-                <div class="grid-item">Cube</div>
-                <div class="grid-item">Cone</div>
-                <div class="grid-item">Cone</div>
-                <div class="grid-item">Cube</div>
-                <div class="grid-item">Cone</div>
-                <div class="grid-item">Hybrid</div>
-                <div class="grid-item">Hybrid</div>
-                <div class="grid-item">Hybrid</div>
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/2637robot1.jpeg" style="width:100%" alt="pic of robot">
+                <div class="text">One</div>
             </div>
-        </tr>
-        <tr>
-            <td>
-                <p>Cycle time: </p>
-                <p>Docked (Y/N):</p>
-                <p>Dock time:</p>
-                <p>Engaged (Y/N):</p>
-                <p>Engage time:</p>
-                <p>Dependency to engage:</p>
-                <p>If assisted, who?:</p>
-                <p>Park (Y/N)</p>
-                <p>Substation(s) used</p>
-                <p># of penalties:</p>
-                <p>Penalties occured:</p>
-                <p>Dropped game pieces:</p>
-                <p>Capable of going over charging station? (Y/N):</p>
-                <p>Substation collection location (Top/Bot/Both):</p>
-                <p>Grid scoring locations (Top/Bot/Both):</p>
-                <p>Robot prone to tipping (Y/N):</p>
-            </td>
-        </tr>
-    </td>
-    </table>
 
-    <table>
-        <tr>
-            <td>
-                <h2 style="color: goldenrod" id="Defense">Defense:</h2>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Played:
-            </td>
-            <td>
-                Y/N
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Push/Block/Both:
-            </td>
-            <td>
-                Block
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Efficiency:
-            </td>
-            <td>
-                High
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <h2 style="color: goldenrod" id="Notes">Notes:</h2>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Driver:</h3>
-            </td>
-            <td>
-                (JS Needed)
-            </td>
-        </tr>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/2637robot2.jpeg" style="width:100%" alt="pic of robot">
+                <div class="text">Two</div>
+            </div>
 
-    </table>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/2637robot3.jpeg" style="width:100%" alt="pic of robot">
+                <div class="text">Three</div>
+            </div>
 
-    <form>
-        <div>
-        <p id ="addComm"></p>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        
+            <br>
+            <div style="text-align:center" class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>  
         </div>
-        <label for="comment">Sumbit comments:</label>
-        <input
-          class="comment"
-          id="comment"
-          type = "text"
-        />
-        <button type="button" onclick="addComment()">Sumbit</button>
-    </form>
-    <br/>
-</div>
+    </div>
 
+    <div class="keySpecs">
+        <h3 style="color: coral" > Key Specs:</h3>
+        <p id="drivetrain">Drivetrain:</p>
+        <p id="motorsUsed">Motors used:</p>
+        <p id="vision">Vision (Y/N):</p>
+        <p id="Mechanisms">Mechanisms:</p>
+    </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function addComment() {
+
+                const commenting = document.getElementById('comment').value;
+                console.log('add comment' + commenting);
+                document.getElementById("addComm").innerHTML ="user: " + commenting;
+                // get the value from comment field
+                // add comment value to one html content
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+        <div style="margin-left: 21px;">
+            <hr>
+            <h2 style="color: coral">Performance</h2>
+
+            <table>
+                <tr>
+                    <td><h2 style="color: goldenrod" id="Auton">Auton</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Mobility:</p>
+                        <p>Docking:</p>
+                        <p>Time to dock:</p>
+                        <p>Engaged:</p>
+                        <p>Time to engage:</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>Path:</h3></td>
+                    <td><img src="images/chargedupfield.svg" alt = "Auton path drawing" width="802" height="366"></td>
+                </tr>
+            </table>
+            <h2>Match Data: Scores</h2>
+            <hr>
+            <table border="1">
+                <tr>
+                    <td>
+                        <h3>M</h3>
+                    </td>
+                    <td>
+                        <h3>Auton</h3>
+                    </td>
+                    <td>
+                        <h3>Teleop</h3>
+                    </td>
+                    <td>
+                        <h3>Climb</h3>
+                    </td>
+                    <td>
+                        <h3>Total</h3>
+                    </td>
+                    <td>
+                        <h3>W/L</h3>
+                    </td>
+                    <td>
+                        <h3>RP</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+            </table>
+            <hr>
+            <h2 style="color: goldenrod">Teleop:</h2>
+            <td>
+                <tr>
+                    <canvas id="myChart" style="width:100%" class="myChart"></canvas>
+                        <script>
+                            var autonScore   = [30,32,28,34,32,26,20,24,34,22];
+                            var teleopScore  = [46,40,36,38,44,34,48,38,42,46];
+                            var endgameScore = [20,0,10,15,5,10,20,15,0,5];
+                            var match        = [1,2,3,4,5,6,7,8,9,10];
+                        
+                            var myChart = new Chart("myChart",
+                            {
+                                type: "line", 
+                                data: 
+                                {
+                                    labels : match,
+                                    datasets: 
+                                    [{
+                                        data: autonScore,
+                                        label: "Auton",
+                                        borderColor: "red",
+                                        fill: false
+                                    },
+                                    {
+                                        data: teleopScore,
+                                        label: "Teleop",
+                                        borderColor: "blue",
+                                        fill: false
+                                    },
+                                    {
+                                        data: endgameScore,
+                                        label: "Endgame",
+                                        borderColor: "green",
+                                        fill: false
+                                    }
+                                ]
+                                },
+                                options: 
+                                {
+                                    title: 
+                                    {
+                                        display: true,
+                                        text: "Score for Each Match"
+                                    }
+                                }
+                            });
+                        </script>
+                </tr>
+
+                <table>
+                    <tr>
+                        <td><p>Cycle time: </p></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><p>Docked (Y/N):</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Dock time:</p></td>
+                    </tr>
+
+                    <tr>   
+                        <td><p>Engaged (Y/N):</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Engage time:</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Dependency to engage:</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>If assisted, who?:</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Park (Y/N)</p></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><p>Substation(s) used</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p># of penalties:</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Penalties occured:</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Dropped game pieces:</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Capable of going over charging station? (Y/N):</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Substation collection location (Top/Bot/Both):</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Grid scoring locations (Top/Bot/Both):</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Robot prone to tipping (Y/N):</p></td>
+                    </tr>
+                </table>
+                
+            </td>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <h2 style="color: goldenrod" id="Defense">Defense:</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Played:</td>
+                    <td>Y/N</td>
+                </tr>
+                <tr>
+                    <td>Push/Block/Both:</td>
+                    <td>Block</td>
+                </tr>
+                <tr>
+                    <td>Efficiency:</td>
+                    <td>High</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <h2 style="color: goldenrod" id="Notes">Notes:</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>Driver:</h3></td>
+                    <td>(JS Needed)</td>
+                </tr>
+            </table>
+
+
+            <form>
+                <div>
+                    <p id ="addComm"></p>
+                </div>
+                <label for="comment">Sumbit comments:</label>
+                <input
+                class="comment"
+                id="comment"
+                type = "text"
+                />
+                <button type="button" onclick="addComment()">Sumbit</button>
+            </form>
+            <br/>
+        </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 function compareTeams() {
   const authKey = '0iSKwn3ykkgDT9ToHqwBizSiiaa44pyLIK85oEdgOkzxNJS1X0vBtDFrJ24PiAWW';
   let teamNumber = document.getElementById("teamNumber").value;
-  let eventcode = '2023cada';
+  let eventcode = '2023caoc';
   // const eventCode = '2022cada';
 
   fetch('https://www.thebluealliance.com/api/v3/event/' +
