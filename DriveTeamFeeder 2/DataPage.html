@@ -118,17 +118,155 @@
                 <tr>
                     <td>
                         <p>Mobility:</p>
-                        <p>Docking:</p>
-                        <p>Time to dock:</p>
-                        <p>Engaged:</p>
-                        <p>Time to engage:</p>
+                        <p>Avg # of Docks:</p>
+                        <p>Avg # of Engages:</p>
+                        <p>Avg Dock Time:</p>
+                        <p>Avg # Auton Score:</p>
+                        <p>Highest Auton Score:</p>
                     </td>
                 </tr>
                 <tr>
                     <td><h3>Path:</h3></td>
                     <td><img src="images/chargedupfield.svg" alt = "Auton path drawing" width="802" height="366"></td>
                 </tr>
+
             </table>
+            <hr>
+            <h2 style="color: goldenrod">Teleop:</h2>
+            <tr>
+                <td>
+                    <canvas id="myChart" style="width:100%" class="myChart"></canvas>
+                        <script>
+                            var autonScore   = [30,32,28,34,32,26,20,24,34,22];
+                            var teleopScore  = [46,40,36,38,44,34,48,38,42,46];
+                            var endgameScore = [20,0,10,15,5,10,20,15,0,5];
+                            var match        = [1,2,3,4,5,6,7,8,9,10];
+                        
+                            var myChart = new Chart("myChart",
+                            {
+                                type: "line", 
+                                data: 
+                                {
+                                    labels : match,
+                                    datasets: 
+                                    [{
+                                        data: autonScore,
+                                        label: "Auton",
+                                        borderColor: "red",
+                                        fill: false
+                                    },
+                                    {
+                                        data: teleopScore,
+                                        label: "Teleop",
+                                        borderColor: "blue",
+                                        fill: false
+                                    },
+                                    {
+                                        data: endgameScore,
+                                        label: "Endgame",
+                                        borderColor: "green",
+                                        fill: false
+                                    }
+                                ]
+                                },
+                                options: 
+                                {
+                                    title: 
+                                    {
+                                        display: true,
+                                        text: "Score for Each Match"
+                                    },
+
+                                    scales:
+                                    {
+                                        xAxes: [{
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: 'Match'
+                                        }
+                                        }],
+                                        yAxes: [{
+                                            scaleLabel: {
+                                            display: true,
+                                            labelString: 'Score'
+                                        }}]
+                                    }
+                                }
+                            });
+                        </script>
+                <td>
+            </tr>
+
+                <table>
+                    <tr><td><p>Highest Teleop Score:</p></td></tr>
+                    <tr><td><p>Avg Teleop Score:</p></td></tr>
+                    <tr><td><p>Avg # of Pieces Dropped</p></td></tr>
+                    <tr><td><p>Average Cycle Time</p></td></tr>
+                    <tr><td><p>Defended against?</p></td></tr>
+                    <tr><td><p>% of Games Defended Against</p></td></tr>
+                    <tr><td><p>Avg Pushing Power:</p></td></tr>
+                    <tr><td><p>Avg Counter Defense:</p></td></tr>                    
+                    <tr><td><p>Avg Defense:</p></td></tr>
+                </table>
+                
+            </td>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <h2 style="color: goldenrod" id="Endgame">Endgame:</h2>
+                    </td>
+                </tr>
+                <tr><td><p>Avg # of Docks:</p></td></tr>
+                <tr><td><p>Avg # of Engages:</p></td></tr>
+                <tr><td><p>Avg Dock Time in Endgame:</p></td></tr>
+                <tr><td><p>Fastest Dock Time in Endgame:</p></td></tr>
+                <tr><td><p>Avg # of Pieces Scored:</p></td></tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <h2 style="color: goldenrod" id="Overall">Overall:</h2>
+                    </td>
+                </tr>
+
+                <tr><td><p>Avg Overall Score:</p></td></tr>
+                <tr><td><p>Highest Overall Score:</p></td></tr>
+                <tr><td><p>% of Pieces Scored Over Attempts:</p></td></tr>
+                <tr><td><p># of Pieces Dropped:</p></td></tr>
+                <tr><td><p>Scoring Location:</p></td></tr>
+                <tr><td><p>Avg # of Links:</p></td></tr>
+                <tr><td><p>Substation Used:</p></td></tr>
+            </table>
+
+            <table>
+                <tr><td><h2 style="color: goldenrod" id="StrategicScout">Strategic Scout:</h2></td></tr>
+                <tr><td><h3 style="color: goldenrod">Auton:</h3></td></tr>
+                <tr><td><p>Starting Position:</p></td></tr>
+                <tr><td><p>Pathing:</p></td></tr>
+                <tr><td><p>Picked game pieces from:</p></td></tr>
+                <tr><td><p>Placed game pieces at:</p></td></tr>
+                <tr><td><p>Ending Position:</p></td></tr>
+
+                <tr><td><h3 style="color: goldenrod">Teleop:</h3></td></tr>
+                <tr><td><p>Capable of going over charging station? (Y/N):</p></td></tr>
+                <tr><td><p>Substation collection location (Top/Bot/Both):</p></td></tr>
+                <tr><td><p>Grid scoring locations (Top/Bot/Both):</p></td></tr>
+                <tr><td><p>Robot prone to tipping (Y/N):</p></td></tr>
+                <tr><td><p>Pathing:</p></td></tr>
+                <tr><td><p>How did the defense affect cycle time? Good counter-defense?:</p></td></tr>
+                <tr><td><p>Played defense? Effective?:</p></td></tr>
+                <tr><td><p>Capable of going over charge station?:</p></td></tr>
+                <tr><td><p>Where is this robot able to collect game pieces in the substations? (Top/Bot/Both): </p></td></tr>
+                <tr><td><p>Where can they reach in the grid? (Top/Middle/Bottom):</p></td></tr>
+                <tr><td><p>Did the robot, if applicable, play man or zone defense?:</p></td></tr>
+                <tr><td><p>Is the robot well balanced? Or prone to tip:</p></td></tr>
+                <tr><td><p>What were the penalties that were incurred by this robot?:</p></td></tr>
+                <tr><td><p>Scout Comments:</p></td></tr>
+            </table>
+
             <h2>Match Data: Scores</h2>
             <hr>
             <table border="1">
@@ -173,156 +311,89 @@
                     <td>DataExample</td>
                     <td>DataExample</td>
                 </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
+                <tr>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                    <td>DataExample</td>
+                </tr>
             </table>
             <hr>
-            <h2 style="color: goldenrod">Teleop:</h2>
-            <td>
-                <tr>
-                    <canvas id="myChart" style="width:100%" class="myChart"></canvas>
-                        <script>
-                            var autonScore   = [30,32,28,34,32,26,20,24,34,22];
-                            var teleopScore  = [46,40,36,38,44,34,48,38,42,46];
-                            var endgameScore = [20,0,10,15,5,10,20,15,0,5];
-                            var match        = [1,2,3,4,5,6,7,8,9,10];
-                        
-                            var myChart = new Chart("myChart",
-                            {
-                                type: "line", 
-                                data: 
-                                {
-                                    labels : match,
-                                    datasets: 
-                                    [{
-                                        data: autonScore,
-                                        label: "Auton",
-                                        borderColor: "red",
-                                        fill: false
-                                    },
-                                    {
-                                        data: teleopScore,
-                                        label: "Teleop",
-                                        borderColor: "blue",
-                                        fill: false
-                                    },
-                                    {
-                                        data: endgameScore,
-                                        label: "Endgame",
-                                        borderColor: "green",
-                                        fill: false
-                                    }
-                                ]
-                                },
-                                options: 
-                                {
-                                    title: 
-                                    {
-                                        display: true,
-                                        text: "Score for Each Match"
-                                    }
-                                }
-                            });
-                        </script>
-                </tr>
-
-                <table>
-                    <tr>
-                        <td><p>Cycle time: </p></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><p>Docked (Y/N):</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Dock time:</p></td>
-                    </tr>
-
-                    <tr>   
-                        <td><p>Engaged (Y/N):</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Engage time:</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Dependency to engage:</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>If assisted, who?:</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Park (Y/N)</p></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><p>Substation(s) used</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p># of penalties:</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Penalties occured:</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Dropped game pieces:</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Capable of going over charging station? (Y/N):</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Substation collection location (Top/Bot/Both):</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Grid scoring locations (Top/Bot/Both):</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><p>Robot prone to tipping (Y/N):</p></td>
-                    </tr>
-                </table>
-                
-            </td>
-            </table>
-
-            <table>
-                <tr>
-                    <td>
-                        <h2 style="color: goldenrod" id="Defense">Defense:</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Played:</td>
-                    <td>Y/N</td>
-                </tr>
-                <tr>
-                    <td>Push/Block/Both:</td>
-                    <td>Block</td>
-                </tr>
-                <tr>
-                    <td>Efficiency:</td>
-                    <td>High</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td>
-                        <h2 style="color: goldenrod" id="Notes">Notes:</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td><h3>Driver:</h3></td>
-                    <td>(JS Needed)</td>
-                </tr>
-            </table>
 
 
             <form>

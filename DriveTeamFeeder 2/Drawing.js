@@ -4,6 +4,9 @@ canvas.width = window.innerWidth
 
 const ctx = canvas.getContext("2d")
 
+var background = new Image();
+background.src = "images/chargedupfield.svg";
+
 let prevX = null
 let prevY = null
 
@@ -32,6 +35,19 @@ backBtn.addEventListener("click", () => {
 // Saving drawing as image
 let saveBtn = document.querySelector(".save")
 saveBtn.addEventListener("click", () => {
+
+
+    const canvas2 = document.createElement("canvas2")
+    canvas2.height = window.innerHeight
+    canvas2.width = window.innerWidth
+
+    const ctx2 = canvas2.getContext("2d")
+
+    ctx2.drawImage(canvas, 0, 0);
+    ctx.clearRect(0, 0, canvas2.width, canvas2.height);
+    ctx.drawImage(background, 0, 0);
+    ctx.drawImage(canvas2, 0, 0);
+
     let data = canvas.toDataURL("imag/png")
     let a = document.createElement("a")
     a.href = data
