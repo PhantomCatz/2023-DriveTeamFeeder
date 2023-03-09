@@ -32,4 +32,4 @@ function compareTeams() {
 
 
 }
-export { teamNumber };
+//export { teamNumber };

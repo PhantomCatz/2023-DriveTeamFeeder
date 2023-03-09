@@ -3,6 +3,8 @@
 
 //const teamNum = teamNumber;
 
+
+import { teamNumber } from './TeamSelection.js';
 const mysql = require('mysql2');
 const http = require('http');
 
@@ -726,7 +728,7 @@ const server = http.createServer(function (request, response) {
 
 });
 
-import { teamNumber } from './TeamSelection.js';
+
 // Start the server
 const PORT = process.env.PORT || 8000;
 server.listen(PORT, function () {
