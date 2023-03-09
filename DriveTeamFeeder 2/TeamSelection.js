@@ -23,8 +23,13 @@ function compareTeams() {
       }
 
       location.href = "DataPage.html?team=" + teamNumber;
+      //location.href = "test.js?team=" + teamNumber;
+
 
     })
+
     .catch(error => console.error(error));
 
+
 }
+export { teamNumber };

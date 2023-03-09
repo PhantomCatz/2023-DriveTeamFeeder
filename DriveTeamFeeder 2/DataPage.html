@@ -6,16 +6,19 @@
     <link rel="stylesheet" href="DataPage.css">
     <script src = "TeamSelection.js"></script>
     <script>
-       window.onload = function() {
-            console.log('loading' + window.location.search);
-            const urlParams = new URLSearchParams(window.location.search);
-            const myParam = urlParams.get('team');
-            document.getElementById("teamNumber").innerHTML ="Team #" + myParam;
+        window.onload = function() {
+        console.log('loading' + window.location.search);
+        const urlParams = new URLSearchParams(window.location.search);
+        const myParam = urlParams.get('team');
+        document.getElementById("teamNumber").innerHTML = "Team #" + myParam;
         };
+       
     </script>
 </head>
 
 <body>
+
+
     <div class="topnav">
         <a  class="active" href="DataPage.html">Robot</a>
         <a href="index.html">Home</a>
@@ -60,6 +63,10 @@
             </div>  
         </div>
     </div>
+
+    <h2 style="color: coral;" style="margin-left: 50px;">Testing Data</h2>
+    <div id="getTestingData"></div>
+    
 
     <div class="keySpecs">
         <h3 style="color: coral" > Key Specs:</h3>
@@ -106,6 +113,7 @@
                 dots[slideIndex-1].className += " active";
             }
         </script>
+
 
         <div style="margin-left: 21px;">
             <hr>
@@ -395,7 +403,6 @@
             </table>
             <hr>
 
-
             <form>
                 <div>
                     <p id ="addComm"></p>
@@ -408,7 +415,7 @@
                 />
                 <button type="button" onclick="addComment()">Sumbit</button>
             </form>
-            <br/>
         </div>
+        <script src="fetchData.js"></script>
 </body>
 </html>
