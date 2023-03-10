@@ -377,3 +377,235 @@ fetch('http://localhost:8000/getAvgTotalPoints')
         dataContainer.innerHTML = JSON.stringify(data);
     })
     .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getDriveTrain')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getDriveTrain');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getnumWheels')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getnumWheels');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getwheelType')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getwheelType');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getdriveTrainMotorType')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getdriveTrainMotorType');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getnumMotors')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getnumMotors');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getDriveTrainFunctional')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getDriveTrainFunctional');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getPossessionMech')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getPosessionMech');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getScoringMech')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getScoringMech');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getScoringMechFunc')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getScoringMechFunc');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getPossessionMechFunc')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getPossessionMechFunc');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/gethasIndexer')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getAvgTotalPoints');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getIndexerJamming')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getIndexerJamming');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getNeedsAlignment')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getNeedsAlignment');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/gethasAimingSystem')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('gethasAimingSystem');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getAimingSystemFunction')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getAimingSystemFunction');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getHasBalancing')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getHasBalancing');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getBalancingTime')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getBalancingTime');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getNodeLevelsCapable')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getNodeLevelsCapable');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getCapableGamePiece')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getCapableGamePiece');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getPreferredGrid')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getPreferredGrid');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getNumPiecesScoredAuton')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getNumPiecesScoredAuton');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getautonPath')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getautonPath');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getnumBatteries')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getnumBatteries');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getnumChargers')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getnumChargers');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getpitOrg')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getpitOrg');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getTeamSafe')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getTeamSafe');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getGP')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getGP');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getCycleTIme')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getCycleTime');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));
+
+fetch('http://localhost:8000/getPitComments')
+    .then(response => response.json())
+    .then(data => {
+        const dataContainer = document.getElementById('getPitComments');
+        dataContainer.innerHTML = JSON.stringify(data);
+    })
+    .catch(error => console.error(error));

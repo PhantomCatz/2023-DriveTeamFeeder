@@ -1,4 +1,6 @@
+
 function compareTeams() {
+  //var teamNumber = 123;
   const authKey = '0iSKwn3ykkgDT9ToHqwBizSiiaa44pyLIK85oEdgOkzxNJS1X0vBtDFrJ24PiAWW';
   let teamNumber = document.getElementById("teamNumber").value;
   let eventcode = '2023caoc';
@@ -29,7 +31,8 @@ function compareTeams() {
     })
 
     .catch(error => console.error(error));
-
+  return teamNumber;
 
 }
+
 //export { teamNumber };

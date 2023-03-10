@@ -4,6 +4,13 @@
 
 }
 
+html,
+body {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+
 .teamid {
     color: cornflowerblue;
     margin-left: 550px;
@@ -91,8 +98,6 @@ body {
     margin: 0px;
     font-family: myFirstFont;
     object-fit: contain;
-
-
 }
 
 .keySpecs {

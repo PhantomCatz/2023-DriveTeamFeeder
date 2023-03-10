@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robot Data Page</title>
     <link rel="stylesheet" href="DataPage.css">
     <script src = "TeamSelection.js"></script>
@@ -11,6 +11,13 @@
         const urlParams = new URLSearchParams(window.location.search);
         const myParam = urlParams.get('team');
         document.getElementById("teamNumber").innerHTML = "Team #" + myParam;
+        
+        const resizeOps = () => {
+            document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+        };
+
+        resizeOps();
+        window.addEventListener("resize", resizeOps);
         };
        
     </script>
@@ -70,10 +77,11 @@
 
     <div class="keySpecs">
         <h3 style="color: coral" > Key Specs:</h3>
-        <p id="drivetrain">Drivetrain:</p>
-        <p id="motorsUsed">Motors used:</p>
-        <p id="vision">Vision (Y/N):</p>
-        <p id="Mechanisms">Mechanisms:</p>
+        <p id="getDriveTrain">Drivetrain:</p>
+      
+        <p id="getnumMotors">Motors used:</p>
+        <p id="gethasAimingSystem">Vision (Y/N):</p>
+        <p id="getPossessionMech">Mechanisms:</p>
     </div>
 
         <script>
@@ -135,7 +143,7 @@
                 </tr>
                 <tr>
                     <td><h3>Path:</h3></td>
-                    <td><img src="images/chargedupfield.svg" alt = "Auton path drawing" width="802" height="366"></td>
+                    <td><img src="images/chargedupfield.svg" alt = "Auton path drawing" width="295" height="166"></td>
                 </tr>
 
             </table>
@@ -145,6 +153,7 @@
                 <td>
                     <canvas id="myChart" style="width:100%" class="myChart"></canvas>
                         <script>
+                            window.teamNumber = 123;
                             var autonScore   = [30,32,28,34,32,26,20,24,34,22];
                             var teleopScore  = [46,40,36,38,44,34,48,38,42,46];
                             var endgameScore = [20,0,10,15,5,10,20,15,0,5];
@@ -280,25 +289,25 @@
             <table border="1">
                 <tr>
                     <td>
-                        <h3>M</h3>
+                        <h4>M</h4>
                     </td>
                     <td>
-                        <h3>Auton</h3>
+                        <h4>Auton</h4>
                     </td>
                     <td>
-                        <h3>Teleop</h3>
+                        <h4>Teleop</h4>
                     </td>
                     <td>
-                        <h3>Climb</h3>
+                        <h4>Climb</h4>
                     </td>
                     <td>
-                        <h3>Total</h3>
+                        <h4>Total</h4>
                     </td>
                     <td>
-                        <h3>W/L</h3>
+                        <h4>W/L</h4>
                     </td>
                     <td>
-                        <h3>RP</h3>
+                        <h4>RP</h4>
                     </td>
                 </tr>
                 <tr>
@@ -412,6 +421,7 @@
                 class="comment"
                 id="comment"
                 type = "text"
+                style = "width: 100px; height: 50px"
                 />
                 <button type="button" onclick="addComment()">Sumbit</button>
             </form>

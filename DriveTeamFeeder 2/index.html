@@ -7,15 +7,15 @@
     <title>2637 Drive Team Feeder Menu</title>
     <link rel="stylesheet" href="Menu.css">
     <script>
-        function changeImage() {
-            var img = document.getElementById("image");
-            img.src = "images/cat1.png";
-            return false;
-        }
-        function changeImageBack() {
-            var img = document.getElementById("image");
-            img.src = "images/cat2.png";
-            return false;
+        
+        window.onload = function()
+        {
+                const resizeOps = () => {
+                document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+            };
+
+            resizeOps();
+            window.addEventListener("resize", resizeOps);
         }
        
     </script>
@@ -23,11 +23,10 @@
 <body>
     <div class="topnav">
     <a class="active" href="index.html">Home</a>
-    <a href="Drawing.html">Strategy Drawing</a>
-   
+    <a href="Drawing.html">Strategy Drawing</a>  
 </div>
 
-<div style="padding-left:16px">
+<div >
    <h1 class = "head">TEAM 2637 DRIVE TEAM FEEDER</h1>
 </div>
 <div>
@@ -61,10 +60,6 @@
 
         <p id ="display" class="stupid"></p>
   
-  <div class="cats">  
-  <button class="closeButton" onclick="changeImage();">close!</button>
-  <img class="catImg" id="image" src="images/cat1.png" />
-  <button class="openButton" onclick="changeImageBack()">open!</button>
-  </div>
+
 </body>
 </html>
