@@ -14,6 +14,7 @@
     <!--<script src="fetchData.js">window.teamNumber = 123;</script>-->
 <div class="ALL" >
     <h1>Pulled data from WebServer</h1>
+
     <h2>All Data</h2>
     <div id="getData"></div>
     <p>.</p>
@@ -60,6 +61,16 @@
     <p>.</p>
     <p>.</p>
     <p>.</p>
+    <h2>Auto Missed Cones</h2>
+    <div id="getAutoMissedCones"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Auto Missed Cubes</h2>
+    <div id="getAutoMissedCubes"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
     <h2>Auton Cones Scored</h2>
     <div id="getAutoConesScored"></div>
     <p>.</p>
@@ -82,6 +93,21 @@
     <p>.</p>
     <h2>Teleop Cones Scored</h2>
     <div id="getTconesScored"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Teleop Missed Cubes</h2>
+    <div id="getTeleopMissedCubes"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>T cubes Scored</h2>
+    <div id="getTcubesScored"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Teleop Missed Cone</h2>
+    <div id="getTeleopMissedCone"></div>
     <p>.</p>
     <p>.</p>
     <p>.</p>
@@ -115,6 +141,11 @@
     <p>.</p>
     <p>.</p>
     <p>.</p>
+    <h2>SubStation</h2>
+    <div id="getSubStation"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
     <h2>Dropped Pieces</h2>
     <div id="getDroppedPieces"></div>
     <p>.</p>
@@ -130,11 +161,6 @@
     <p>.</p>
     <p>.</p>
     <p>.</p>
-    <h2>Defense: </h2>
-    <div id="getDefense"></div>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
     <h2>Over Charge Station</h2>
     <div id="getOverChargeStation"></div>
     <p>.</p>
@@ -142,6 +168,11 @@
     <p>.</p>
     <h2>Penalties  Incurred</h2>
     <div id="getPenaltiesIncurred"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Comments:</h2>
+    <div id="getComments"></div>
     <p>.</p>
     <p>.</p>
     <p>.</p>
@@ -179,11 +210,17 @@
     <p>.</p>
     <p>.</p>
     <p>.</p>
-    <h2>Comments:</h2>
-    <div id="getComments"></div>
+    <h2>Defense Affect Cycle Time:</h2>
+    <div id="getDefenseAffectCycleTime"></div>
     <p>.</p>
     <p>.</p>
     <p>.</p>
+    <h2>Defended: </h2>
+    <div id="getwasDefended"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    
 
     <h2>Peak Teleop</h2>
     <div id="getPeakTeleop"></div>
@@ -235,7 +272,7 @@
     <p>.</p>
     <p>.</p>
     <p>.</p>
-    <h2>Average Cones Scored: </h2>
+    <h2>Average Cubes Scored: </h2>
     <div id="getAvgCubesScored"></div>
     <p>.</p>
     <p>.</p>
@@ -245,7 +282,383 @@
     <p>.</p>
     <p>.</p>
     <p>.</p>
-    <div id="getALL"></div>
+    <h2>Drive Train: </h2>
+    <div id="getDriveTrain"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Num Wheels: </h2>
+    <div id="getnumWheels"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Wheel type: </h2>
+    <div id="getWheelType"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Drive Train Motor Type: </h2>
+    <div id="getdriveTrainMotorType"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2># of Motors: </h2>
+    <div id="getnumMotors"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Drive Train Functionality: </h2>
+    <div id="getDriveTrainFunctional"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Posession Mechanism: </h2>
+    <div id="getPosessionMech"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Scoring Mechanism: </h2>
+    <div id="getScoringMech"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Scoring Mechanism Functionality: </h2>
+    <div id="getScoringMechFunc"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Posession Mechanism Functionality: </h2>
+    <div id="getPossessionMechFunc"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Has Indexer: </h2>
+    <div id="gethasIndexer"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Indexer Jamming: </h2>
+    <div id="getIndexerJamming"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Needs Alignment: </h2>
+    <div id="getNeedsAlignment"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Average Total Points: </h2>
+    <div id="gethasAimingSystem"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Aiming System Function: </h2>
+    <div id="getAimingSystemFunction"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Has Balancing: </h2>
+    <div id="getHasBalancing"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Balancing Time: </h2>
+    <div id="getBalancingTime"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Node Levels Capable: </h2>
+    <div id="getNodeLevelsCapable"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Capable Game Piece: </h2>
+    <div id="getCapableGamePiece"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+
+    <h2>Preferred Grid: </h2>
+    <div id="getPreferredGrid"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2># Pieces Scored Auton: </h2>
+    <div id="getNumPiecesScoredAuton"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Auton Path: </h2>
+    <div id="getautonPath"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2># Batteries: </h2>
+    <div id="getnumBatteries"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2># Chargers: </h2>
+    <div id="getnumChargers"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Pit Org: </h2>
+    <div id="getpitOrg"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Team Safety: </h2>
+    <div id="getTeamSafe"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Gracious Professionalism: </h2>
+    <div id="getGP"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Cycle Time: </h2>
+    <div id="getCycleTime"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Pit Comments: </h2>
+    <div id="getPitComments"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Peak Teleop: </h2>
+    <div id="getPeakTeleo"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Get Average Teleop: </h2>
+    <div id="getAvgTeleop"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Average # Dropped: </h2>
+    <div id="getAvgNumDropped"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Teleop Total Cones Scored: </h2>
+    <div id="getTeleopTotalConesScored"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Teleop Total Cubes Scored: </h2>
+    <div id="getTeleopTotalCubesScored"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Avg Cycle Time: </h2>
+    <div id="getAvgCycleTime"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Defended Against: </h2>
+    <div id="getDefendedAgainst"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Percentage Of Games Defended Against: </h2>
+    <div id="getPercentageOfGamesDefendedAgainst"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Avg Pushing Power: </h2>
+    <div id="getAvgPushingPower"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Avg Counter Defense: </h2>
+    <div id="getAvgCounterDefense"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+
+    <h2>Auton Start Location: </h2>
+    <div id="getAutonStartLocation"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p><h2>Auto Mobility: </h2>
+    <div id="getAutoMobility"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Avg Num Of Charge Station Docks: </h2>
+    <div id="getAvgNumOfChargeStationDocks"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Avg Num Of Charge Station Engages: </h2>
+    <div id="getAvgNumOfChargeStationEngages"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Avg Docking Time: </h2>
+    <div id="getAvgDockingTime"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Avg Engaged Time: </h2>
+    <div id="getAvgEngagedTime"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Peak Auton Number Cubes: </h2>
+    <div id="getPeakAutonNumberCubes"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Peak Auton Num Cones: </h2>
+    <div id="getPeakAutonNumCones"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Peak Auton Points: </h2>
+    <div id="getPeakAutonPoints"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>End Game Avg Of Charge Station Docks: </h2>
+    <div id="getEndGameAvgOfChargeStationDocks"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>End Game Avg Of Charge Station Engages: </h2>
+    <div id="getEndGameAvgOfChargeStationEngages"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>End Game Docked Engaged Avg Time: </h2>
+    <div id="getEndGameDockedEngagedAvgTime"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>End Game Dock Or Engage Fastest Time: </h2>
+    <div id="getEndGameDockOrEngageFastestTime"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>End Game Number Avg Cubes Scored: </h2>
+    <div id="getEndGameNumberAvgCubesScored"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>End Game Number Avg Cones Scored: </h2>
+    <div id="getEndGameNumberAvgConesScored"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+
+    <h2>Overall Avg Total Points: </h2>
+    <div id="getOverallAvgTotalPoints"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Overall Percentage Of Pieces Scored Over Aattempts: </h2>
+    <div id="getOverallPercentageOfPiecesScoredOverAattempts"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Overall Num Of Pieces Dropped: </h2>
+    <div id="getOverallNumOfPiecesDropped"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Overall Substation Used: </h2>
+    <div id="getOverallSubstationUsed"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+
+    /*StrategicScout*/
+    <h2>Robot Starting Position: </h2>
+    <div id="getRobotStartingPosition"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Robot Pathing: </h2>
+    <div id="getRobotPathing"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>picked Up: </h2>
+    <div id="getpickedUp"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>placed On Grid: </h2>
+    <div id="getplacedOnGrid"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>end Position: </h2>
+    <div id="getendPosition"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>T defense Affect Cycle: </h2>
+    <div id="getTdefenseAffectCycle"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>T effective Defense: </h2>
+    <div id="getTeffectiveDefense"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>T over Charging Station: </h2>
+    <div id="getToverChargingStation"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>T reach In Grid: </h2>
+    <div id="getTreachInGrid"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>T man Or Zone Defense: </h2>
+    <div id="getTmanOrZoneDefense"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>T robot Balanced: </h2>
+    <div id="getTrobotBalanced"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>T penalties Incurred: </h2>
+    <div id="getTpenaltiesIncurred"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Strat Scout Comments: </h2>
+    <div id="getStratScoutComments"> </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Match ALL </h2>
+    <div id="getMatchALL"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Strat Scout ALL: </h2>
+    <div id="getStratScoutALL"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Pit ALL: </h2>
+    <div id="getPitALL"></div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2>Summary ALL: </h2>
+    <div id="getSummaryALL"></div>
+
     
 </div>
    

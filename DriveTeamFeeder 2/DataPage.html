@@ -77,11 +77,15 @@
 
     <div class="keySpecs">
         <h3 style="color: coral" > Key Specs:</h3>
-        <p id="getDriveTrain">Drivetrain:</p>
-      
-        <p id="getnumMotors">Motors used:</p>
-        <p id="gethasAimingSystem">Vision (Y/N):</p>
-        <p id="getPossessionMech">Mechanisms:</p>
+        
+        <p >Drivetrain:</p>
+        <p id = "getMatchLvl"> </p>
+        <p >Motors used:</p>
+        <p id = "getnumMotors"></p>
+        <p>Vision (Y/N):</p>
+        <p id = "gethasAimingSystem"></p>
+        <p >Mechanisms:</p>
+        <p id="getPossessionMech"></p>
     </div>
 
         <script>
@@ -134,11 +138,17 @@
                 <tr>
                     <td>
                         <p>Mobility:</p>
+                        <p id = "getAutoMobility"></p>
                         <p>Avg # of Docks:</p>
+                        <p id = "getAvgNumDocks"></p>
                         <p>Avg # of Engages:</p>
+                        <p id = "getAvgNumEngaged"></p>
                         <p>Avg Dock Time:</p>
+                        <p id = "getPeakDockTime"></p>
                         <p>Avg # Auton Score:</p>
+                        <p id = "getAvgAuton"></p>
                         <p>Highest Auton Score:</p>
+                        <p id = "getPeakAuton"></p>
                     </td>
                 </tr>
                 <tr>
@@ -216,14 +226,23 @@
 
                 <table>
                     <tr><td><p>Highest Teleop Score:</p></td></tr>
+                    <p id = "getPeakTeleop"></p>
                     <tr><td><p>Avg Teleop Score:</p></td></tr>
+                    <p id = "getAvgTeleop"></p>
                     <tr><td><p>Avg # of Pieces Dropped</p></td></tr>
+                    <p id = "getDroppedPieces"></p>
                     <tr><td><p>Average Cycle Time</p></td></tr>
+                    <p id = "getCycleTime"></p>
                     <tr><td><p>Defended against?</p></td></tr>
+                    <p id = "getDefense"></p>
                     <tr><td><p>% of Games Defended Against</p></td></tr>
+                    <p id = ""></p>
                     <tr><td><p>Avg Pushing Power:</p></td></tr>
-                    <tr><td><p>Avg Counter Defense:</p></td></tr>                    
+                    <p id = ""></p>
+                    <tr><td><p>Avg Counter Defense:</p></td></tr>  
+                    <p id = "getCounterDefense"></p>                  
                     <tr><td><p>Avg Defense:</p></td></tr>
+                    <p id = "getDefense"></p>
                 </table>
                 
             </td>
@@ -236,10 +255,15 @@
                     </td>
                 </tr>
                 <tr><td><p>Avg # of Docks:</p></td></tr>
+                <p id = "getAvgNumDocks"></p>
                 <tr><td><p>Avg # of Engages:</p></td></tr>
+                <p id = "getAvgEngagedTime"></p>
                 <tr><td><p>Avg Dock Time in Endgame:</p></td></tr>
+                <p id = "getAvgDockingTime"></p>
                 <tr><td><p>Fastest Dock Time in Endgame:</p></td></tr>
+                <p id = "getPeakDockTime"></p>
                 <tr><td><p>Avg # of Pieces Scored:</p></td></tr>
+                <p id = "getNumPiecesScoredAuton"></p>
             </table>
 
             <table>
@@ -250,38 +274,64 @@
                 </tr>
 
                 <tr><td><p>Avg Overall Score:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Highest Overall Score:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>% of Pieces Scored Over Attempts:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p># of Pieces Dropped:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Scoring Location:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Avg # of Links:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Substation Used:</p></td></tr>
+                <p id = ""></p>
             </table>
 
             <table>
                 <tr><td><h2 style="color: goldenrod" id="StrategicScout">Strategic Scout:</h2></td></tr>
                 <tr><td><h3 style="color: goldenrod">Auton:</h3></td></tr>
                 <tr><td><p>Starting Position:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Pathing:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Picked game pieces from:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Placed game pieces at:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Ending Position:</p></td></tr>
+                <p id = ""></p>
 
                 <tr><td><h3 style="color: goldenrod">Teleop:</h3></td></tr>
                 <tr><td><p>Capable of going over charging station? (Y/N):</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Substation collection location (Top/Bot/Both):</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Grid scoring locations (Top/Bot/Both):</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Robot prone to tipping (Y/N):</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Pathing:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>How did the defense affect cycle time? Good counter-defense?:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Played defense? Effective?:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Capable of going over charge station?:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Where is this robot able to collect game pieces in the substations? (Top/Bot/Both): </p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Where can they reach in the grid? (Top/Middle/Bottom):</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Did the robot, if applicable, play man or zone defense?:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Is the robot well balanced? Or prone to tip:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>What were the penalties that were incurred by this robot?:</p></td></tr>
+                <p id = ""></p>
                 <tr><td><p>Scout Comments:</p></td></tr>
+                <p id = ""></p>
             </table>
 
             <h2>Match Data: Scores</h2>

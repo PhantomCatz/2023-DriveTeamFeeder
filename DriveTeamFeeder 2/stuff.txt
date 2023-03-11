@@ -1,0 +1,44 @@
+initials
+
+team_number
+match_number
+match_event
+match_level
+robot
+auto_mobility
+auto_docked
+auto_engaged
+auto_engaged_time
+auto_missed_cone (change)
+auto_missed_cube (change)
+auto_cones_scored
+auto_cubes_scored
+auto_total_points
+cycle_time
+T_cones_scored
+teleop_missed_cube (change)
+T_cubes_scored
+teleop_missed_cone (change)
+T_total_points
+T_docked
+T_engaged
+T_engaged_time
+T_ind_or_dep
+parked
+substation
+dropped_pieces
+num_penalties
+robot_died
+overChargeStation
+penaltiesIncurred
+comments (moved)
+pushing_capability
+counter_defense
+offensive_maneuverability
+defensive_location
+auto_start_location
+auto_end_location
+intake_speed
+defense_affect_cycle_time
+was_defended (moved)
+

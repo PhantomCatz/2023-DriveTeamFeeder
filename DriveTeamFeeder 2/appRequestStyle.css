@@ -1,3 +1,6 @@
 .ALL {
-    padding-left: 10px;
+    padding-left: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal;
 }
